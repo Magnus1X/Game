@@ -20,8 +20,7 @@ const NumberSelector = ({
           <Box
             isSelected={value === selectedNumber}
             key={i}
-            onClick={() => numberSelectorHandler(value)}
-          >
+            onClick={() => numberSelectorHandler(value)}>
             {value}
           </Box>
         ))}
