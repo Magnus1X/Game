@@ -26,10 +26,10 @@ const GamePlay = () => {
     const randomNumber = generateRandomNumber(1, 7);
     setCurrentDice((prev) => randomNumber);
 
-    if (selectedNumber === randomNumber) {
+    if (randomNumber>=selectedNumber) {
       setScore((prev) => prev + randomNumber);
     } else {
-      setScore((prev) => prev - 2);
+      setScore((prev) => prev - Math.abs(selectedNumber-randomNumber));
     }
 
     setSelectedNumber(undefined);
